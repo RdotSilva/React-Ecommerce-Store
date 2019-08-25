@@ -1,6 +1,6 @@
 import React from "react";
 
-const Homepage = () => {
+const Homepage = () => (
 	<div className="homepage">
 		<h1>Welcome to my Homepage</h1>
 		<div className="directory-menu">
@@ -35,7 +35,7 @@ const Homepage = () => {
 				</div>
 			</div>
 		</div>
-	</div>;
-};
+	</div>
+);
 
 export default Homepage;
