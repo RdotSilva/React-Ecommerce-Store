@@ -2,8 +2,12 @@ import React from "react";
 
 import "./CollectionItemStyles.scss";
 
-const CollectionItem = () => {
-	return <div></div>;
+const CollectionItem = ({ id, name, price, imageUrl }) => {
+	return (
+		<div className="collection-item">
+			<div className="image"></div>
+		</div>
+	);
 };
 
 export default CollectionItem;
