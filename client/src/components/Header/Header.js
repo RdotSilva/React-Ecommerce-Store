@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./HeaderStyles.scss";
 
 const Header = () => {
-	return <div></div>;
+	return (
+		<div className="header">
+			<Link to="/"></Link>
+		</div>
+	);
 };
 
 export default Header;
