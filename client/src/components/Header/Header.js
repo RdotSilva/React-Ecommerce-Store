@@ -8,7 +8,14 @@ import "./HeaderStyles.scss";
 const Header = () => {
 	return (
 		<div className="header">
-			<Link to="/"></Link>
+			<Link to="/" className="logo-container">
+				<Logo className="logo"></Logo>
+			</Link>
+			<div className="options">
+				<Link className="option" to="/shop">
+					SHOP
+				</Link>
+			</div>
 		</div>
 	);
 };
