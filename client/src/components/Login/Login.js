@@ -28,11 +28,18 @@ class Login extends Component {
 				<span>Sign in with your email and password</span>
 
 				<form onSubmit={handleSubmit}>
-					<input name="email" type="email" value={this.state.email} required />
+					<input
+						name="email"
+						type="email"
+						onChange={this.handleChange}
+						value={this.state.email}
+						required
+					/>
 					<label>Email</label>
 					<input
 						type="password"
 						name="password"
+						onChange={this.handleChange}
 						value={this.state.password}
 						required
 					/>
