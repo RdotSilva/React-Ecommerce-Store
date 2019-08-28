@@ -27,6 +27,7 @@ class Login extends Component {
 						required
 					/>
 					<label>Password</label>
+					<input type="submit" value="Submit Form" />
 				</form>
 			</div>
 		);
