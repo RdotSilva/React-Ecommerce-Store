@@ -1,6 +1,16 @@
 import React, { Component } from "react";
+import "./LoginStyles.scss";
 
-export class Login extends Component {
+class Login extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			email: "",
+			password: ""
+		};
+	}
+
 	render() {
 		return <div></div>;
 	}
