@@ -20,6 +20,13 @@ class Login extends Component {
 				<form>
 					<input name="email" type="email" value={this.state.email} required />
 					<label>Email</label>
+					<input
+						type="password"
+						name="password"
+						value={this.state.password}
+						required
+					/>
+					<label>Password</label>
 				</form>
 			</div>
 		);
