@@ -6,7 +6,8 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage/Homepage";
 import ShopPage from "./pages/Shop/Shop";
 import Header from "./components/Header/Header";
-import LoginRegister from "./pages/LoginRegister/LoginRegister.scss";
+import LoginRegister from "./pages/LoginRegister/LoginRegister";
+
 function App() {
 	return (
 		<div>
