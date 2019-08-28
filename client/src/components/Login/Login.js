@@ -16,6 +16,11 @@ class Login extends Component {
 		this.setState({ email: "", password: "" });
 	};
 
+	handleChange = event => {
+		const { value, name } = event.target;
+		this.setState({ [name]: value });
+	};
+
 	render() {
 		return (
 			<div className="sign-in">
