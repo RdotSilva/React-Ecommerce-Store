@@ -10,12 +10,19 @@ import LoginRegister from "./pages/LoginRegister/LoginRegister";
 
 import { auth } from "./firebase/firebaseUtils";
 
-class App extends Component() {
+class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			currentUser: null
 		};
+	}
+
+	componentDidMount() {
+		auth.onAuthStateChanged(user => {
+			this.setState({ currentUser: user });
+			console.log(user);
+		});
 	}
 
 	render() {
