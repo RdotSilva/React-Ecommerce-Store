@@ -12,6 +12,7 @@ const config = {
 	appId: "1:392590566883:web:913f90f8c9b2b4ab"
 };
 
+// Save user to database if authorized.
 export const createUserProfileDocument = async (userAuth, additionalData) => {
 	if (!userAuth) return;
 
@@ -19,6 +20,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 	const snapShot = await userRef.get();
 
+	// Set user ref if snapshot is not present.
 	if (!snapShot.exists) {
 		const { displayName, email } = userAuth;
 		const createdAt = new Date();
@@ -34,13 +36,16 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 			console.log("Error creating user", error.message);
 		}
 	}
+	return userRef;
 };
 
+// Firebase & firestore setup.
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
+// Google sign in auth.
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
