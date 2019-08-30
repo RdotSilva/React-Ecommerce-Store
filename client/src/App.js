@@ -35,6 +35,9 @@ class App extends Component {
 						}
 					});
 				});
+			} else {
+				// If user logs out set current user to null.
+				this.setState({ currentUser: userAuth });
 			}
 		});
 	}
