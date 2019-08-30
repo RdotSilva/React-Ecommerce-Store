@@ -19,6 +19,37 @@ class Register extends Component {
 		};
 	}
 
+	handleSubmit = async event => {
+		event.preventDefault();
+
+		const { displayName, email, password, confirmPassword } = this.state;
+
+		if (password !== confirmPassword) {
+			alert("Passwords don't match");
+			return;
+		}
+
+		// Create user account with email and password provided.
+		try {
+			const { user } = await auth.createUserWithEmailAndPassword(
+				email,
+				password
+			);
+
+			await createUserProfileDocument(user, { displayName });
+
+			// Reset state values.
+			this.setState({
+				displayName: "",
+				email: "",
+				password: "",
+				confirmPassword: ""
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	render() {
 		const { displayName, email, password, confirmPassword } = this.state;
 
