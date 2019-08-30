@@ -21,8 +21,21 @@ class App extends Component {
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
-		this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
-			createUserProfileDocument(user);
+		// Stores user into db if user is authenticated.
+		this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
+
+				// Add user data to state.
+				userRef.onSnapshot(snapShot => {
+					this.setState({
+						currentUser: {
+							id: snapShot.id,
+							...snapShot.data()
+						}
+					});
+				});
+			}
 		});
 	}
 
