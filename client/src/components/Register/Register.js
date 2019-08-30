@@ -51,6 +51,14 @@ class Register extends Component {
 						label="Password"
 						required
 					/>
+					<FormInput
+						type="password"
+						name="confirmPassword"
+						value={confirmPassword}
+						onChange={this.handleChange}
+						label="Confirm Password"
+						required
+					/>
 				</form>
 			</div>
 		);
