@@ -43,6 +43,14 @@ class Register extends Component {
 						label="Email"
 						required
 					/>
+					<FormInput
+						type="password"
+						name="password"
+						value={password}
+						onChange={this.handleChange}
+						label="Password"
+						required
+					/>
 				</form>
 			</div>
 		);
