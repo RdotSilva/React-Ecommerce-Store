@@ -5,7 +5,7 @@ import CustomButton from "../CustomButton/CustomButton";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebaseUtils";
 
-import "./RegisterStlyes.scss";
+import "./RegisterStyles.scss";
 
 class Register extends Component {
 	constructor(props) {
