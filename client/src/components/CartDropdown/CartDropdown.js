@@ -5,7 +5,7 @@ import "./CartDropdownStyles.scss";
 import CustomButton from "../CustomButton/CustomButton";
 import CartItem from "../CartItem/CartItem";
 
-const CartDropdown = () => {
+const CartDropdown = ({ cartItems }) => {
 	return (
 		<div className="cart-dropdown">
 			<div className="cart-items">
