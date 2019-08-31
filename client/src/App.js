@@ -17,6 +17,9 @@ class App extends Component {
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
+		// Redux action coming in from mapDispatchToProps.
+		const { setCurrentUser } = this.props;
+
 		// Stores user into db if user is authenticated.
 		this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
 			if (userAuth) {
@@ -24,7 +27,7 @@ class App extends Component {
 
 				// Add user data to state.
 				userRef.onSnapshot(snapShot => {
-					this.setState({
+					setCurrentUser({
 						currentUser: {
 							id: snapShot.id,
 							...snapShot.data()
@@ -33,7 +36,7 @@ class App extends Component {
 				});
 			} else {
 				// If user logs out set current user to null.
-				this.setState({ currentUser: userAuth });
+				setCurrentUser(userAuth);
 			}
 		});
 	}
