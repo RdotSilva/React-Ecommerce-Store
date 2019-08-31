@@ -11,14 +11,9 @@ import LoginRegister from "./pages/LoginRegister/LoginRegister";
 
 import { auth, createUserProfileDocument } from "./firebase/firebaseUtils";
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentUser: null
-		};
-	}
+import { setCurrentUser } from "./redux/user/userActions";
 
+class App extends Component {
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
@@ -61,4 +56,11 @@ class App extends Component {
 	}
 }
 
-export default connect()(App);
+const mapDispatchToProps = dispatch => ({
+	setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+	null,
+	mapDispatchToProps
+)(App);
