@@ -1,5 +1,9 @@
 import "./CartIconStyles.scss";
 import React from "react";
+import { connect } from "react-redux";
+
+import { toggleCartHidden } from "../../redux/cart/cartActions";
+
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 
 const CartIcon = () => {
@@ -11,5 +15,9 @@ const CartIcon = () => {
 		</div>
 	);
 };
+
+const mapDispatchToProps = dispatch => ({
+	toggleCartHidden: () => dispatch(toggleCartHidden())
+});
 
 export default CartIcon;
