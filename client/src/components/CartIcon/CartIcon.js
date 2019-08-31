@@ -1,4 +1,4 @@
-import "./CartIcon.scss";
+import "./CartIconStyles.scss";
 import React from "react";
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 
