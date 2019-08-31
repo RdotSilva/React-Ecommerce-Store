@@ -6,7 +6,9 @@ import { addItem } from "../../redux/cart/cartActions";
 import CustomButton from "../CustomButton/CustomButton";
 import "./CollectionItemStyles.scss";
 
-const CollectionItem = ({ id, name, price, imageUrl, addItem }) => {
+const CollectionItem = ({ item, addItem }) => {
+	const { name, price, imageUrl } = item;
+
 	return (
 		<div className="collection-item">
 			<div
@@ -17,7 +19,9 @@ const CollectionItem = ({ id, name, price, imageUrl, addItem }) => {
 				<span className="name">{name}</span>
 				<span className="price">{price}</span>
 			</div>
-			<CustomButton inverted>Add to card</CustomButton>
+			<CustomButton onClick={() => addItem(item)} inverted>
+				Add to card
+			</CustomButton>
 		</div>
 	);
 };
