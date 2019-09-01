@@ -7,7 +7,7 @@ import CustomButton from "../CustomButton/CustomButton";
 import CartItem from "../CartItem/CartItem";
 import { selectCartItems } from "../../redux/cart/cartSelectors";
 
-const CartDropdown = ({ cartItems }) => {
+const CartDropdown = ({ cartItems, history }) => {
 	return (
 		<div className="cart-dropdown">
 			<div className="cart-items">
@@ -18,7 +18,9 @@ const CartDropdown = ({ cartItems }) => {
 				) : (
 					<span className="empty-message">Your cart is empty</span>
 				)}
-				<CustomButton>GO TO CHECKOUT</CustomButton>
+				<CustomButton onClick={() => history.push("/checkout")}>
+					GO TO CHECKOUT
+				</CustomButton>
 			</div>
 		</div>
 	);
