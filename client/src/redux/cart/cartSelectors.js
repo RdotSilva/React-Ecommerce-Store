@@ -1,5 +1,4 @@
 import { createSelector } from "reselect";
-import CartDropdown from "../../components/CartDropdown/CartDropdown";
 
 const selectCart = state => state.cart;
 
