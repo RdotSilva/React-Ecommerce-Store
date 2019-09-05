@@ -1,15 +1,15 @@
 import React from "react";
 import CollectionItem from "../../components/CollectionItem/CollectionItem";
 
-import "./CategoryStyles.scss";
+import "./CollectionStyles.scss";
 
-const Category = ({ match }) => {
-	console.log(match.params.categoryId);
+const Collection = ({ match }) => {
+	console.log(match.params.collectionId);
 	return (
-		<div className="category">
-			<h2>Category Page</h2>
+		<div className="collection-page">
+			<h2>Collection Page</h2>
 		</div>
 	);
 };
 
-export default Category;
+export default Collection;
