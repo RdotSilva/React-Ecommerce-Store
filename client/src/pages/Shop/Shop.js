@@ -1,16 +1,11 @@
 import React from "react";
 
-import { selectCollections } from "../../redux/shop/shopSelectors";
+import CollectionsOverview from "../../components/CollectionsOverview/CollectionsOverview";
 
 const Shop = ({ collections }) => {
 	return (
 		<div className="shop-page">
-			{collections.map(({ id, ...otherCollectionProps }) => (
-				<CollectionPreview
-					key={id}
-					{...otherCollectionProps}
-				></CollectionPreview>
-			))}
+			<CollectionsOverview />
 		</div>
 	);
 };
