@@ -14,3 +14,12 @@ export const selectCollections = createSelector(
 	[selectShop],
 	shop => shop.collections
 );
+
+export const selectCollection = collectionUrlparam =>
+	createSelector(
+		[selectCollections],
+		collections =>
+			collections.find(
+				collection => collection.id === collectionIdMap[collectionUrlparam]
+			)
+	);
