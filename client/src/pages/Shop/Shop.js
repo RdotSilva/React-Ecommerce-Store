@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from "react-redux;";
 
 import CollectionPreview from "../../components/CollectionPreview/CollectionPreview";
+import { selectShopItems } from "../../redux/shop/shopSelectors";
 
 const Shop = ({ collections }) => {
 	return (
@@ -15,4 +17,4 @@ const Shop = ({ collections }) => {
 	);
 };
 
-export default Shop;
+export default connect(mapStateToProps)(Shop);
