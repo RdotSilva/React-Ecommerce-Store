@@ -7,7 +7,19 @@ const StripeButton = ({ price }) => {
 
 	const publishableKey = "pk_test_xyDIdNuDtRSMOQn1ZKcAptzp00eHEoR1rD";
 
-	return <div></div>;
+	return (
+		<StripeCheckout
+			label="Pay Now"
+			name="Silva Clothing Store"
+			billingAddress
+			shippingAddress
+			image="https://svgshare.com/i/CUz.svg"
+      description={`Your total is $${price}`}
+      amount={priceForStripe}
+      panelLabel="Pay Now"
+      token={}
+		/>
+	);
 };
 
 export default StripeButton;
