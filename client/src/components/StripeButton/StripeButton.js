@@ -7,6 +7,11 @@ const StripeButton = ({ price }) => {
 
 	const publishableKey = "pk_test_xyDIdNuDtRSMOQn1ZKcAptzp00eHEoR1rD";
 
+	const onToken = token => {
+		console.log(token);
+		alert("Payment Successful");
+	};
+
 	return (
 		<StripeCheckout
 			label="Pay Now"
@@ -14,10 +19,10 @@ const StripeButton = ({ price }) => {
 			billingAddress
 			shippingAddress
 			image="https://svgshare.com/i/CUz.svg"
-      description={`Your total is $${price}`}
-      amount={priceForStripe}
-      panelLabel="Pay Now"
-      token={}
+			description={`Your total is $${price}`}
+			amount={priceForStripe}
+			panelLabel="Pay Now"
+			token={onToken}
 		/>
 	);
 };
