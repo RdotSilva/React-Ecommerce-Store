@@ -4,8 +4,7 @@
 	"description": "React E-Commerce Store",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "react-scripts build --prefix client"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
 	"license": "MIT"
