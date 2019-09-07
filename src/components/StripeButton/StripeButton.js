@@ -1,6 +1,5 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
-import 
 
 const StripeButton = ({ price }) => {
 	// Stripe requires price to be in cents.
@@ -19,7 +18,6 @@ const StripeButton = ({ price }) => {
 			name="Gear-Up Clothing"
 			billingAddress
 			shippingAddress
-			image=""
 			description={`Your total is $${price}`}
 			amount={priceForStripe}
 			panelLabel="Pay Now"
