@@ -26,7 +26,9 @@ npm run dev
 
 ## Screenshots
 
-Coming soon...
+![Main Page](https://i.imgur.com/qD2pWen.jpg "Main page")
+![Products](https://i.imgur.com/zMUu7ri.jpg "Products")
+![Checkout](https://i.imgur.com/BK4kPfI.png "Checkout")
 
 ## Built With
 
