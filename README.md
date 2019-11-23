@@ -2,6 +2,8 @@
 
 E-commerce store built using React, Firebase, Redux, GraphQL.
 
+Live Demo: https://gear-up-clothing.herokuapp.com/
+
 ## Installation
 
 1. Install dependencies in main project folder.
